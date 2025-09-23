@@ -1,0 +1,51 @@
+.signup-inputbox {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  width: 400px;
+  margin: 65px 0px 0px 500px;
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-inputbox form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.signup-inputbox form input {
+  padding: 10px 10px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 100%;
+}
+
+.signup-inputbox form button {
+  padding: 10px;
+  background-color: #137c05;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
+.signup-inputbox form button:hover {
+background-color: #0a4902;
+ 
+}
+
+.signup-inputbox form button:active {
+background-color: #020e00;
+ 
+}
+
+
+
+
