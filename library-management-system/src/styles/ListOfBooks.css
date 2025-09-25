@@ -1,0 +1,22 @@
+.listofbooks-records {
+  margin: 3dvw;
+}
+
+.listofbooks-records tr {
+  background-color: white;
+}
+
+.listofbooks-records th {
+  padding: 5px;
+  justify-items: center;
+  width: 100vw;
+}
+
+.listofbooks-records td {
+  padding: 10px;
+  justify-items: center;
+}
+
+.listofbooks-records tbody{
+     
+}

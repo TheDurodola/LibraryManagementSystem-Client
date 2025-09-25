@@ -24,22 +24,23 @@ function SignInBox() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials: "include",
-        body: JSON.stringify(form),
+        body: JSON.stringify(form)
       });
 
       if (response.ok) {
         const data = await response.json();
-
-        if (data.role === "librarian") {
-          navigate("/*");
+        console.log(data)
+        console.log(data.role)
+        if (data.role == 'librarian') {
+          navigate("/librarian");
         }
 
-        if (data.role === "admin") {
-          navigate("/*");
+        else if (data.role == "admin") {
+          navigate("/admin");
         }
 
-        if (data.role === "patron") {
-          navigate("/*");
+        else if (data.role == "patron") {
+          navigate("/patron");
         } else {
           navigate("/*");
         }
