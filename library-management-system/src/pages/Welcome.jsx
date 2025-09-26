@@ -1,13 +1,13 @@
 
-import Navbar2 from "../components/Navbar2.jsx";
-import WelcomeMessage  from "../components/WelcomeMessage.jsx";
+import Navbar2 from "../Navbar/Navbar2.js";
+
  
 function Welcome(){
 
     return (
         <>
         <Navbar2></Navbar2>
-        <WelcomeMessage></WelcomeMessage>
+      
         </>
     )
 }

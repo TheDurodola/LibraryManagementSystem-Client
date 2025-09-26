@@ -1,11 +1,10 @@
-import Navbar from "../components/Navbar.jsx";
-import DoesntExist from "../components/DoesntExist.jsx";
+import Header from "../Headers/MainHeader"
+
 
 function Page404() {
   return (
     <>
-      <Navbar />
-      <DoesntExist />
+    <Header></Header>
     </>
   );
 }

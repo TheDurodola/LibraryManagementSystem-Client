@@ -1,0 +1,29 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    padding: min(10px, 8rem);
+}
+
+
+.navbar h1{
+    color: aliceblue;
+}
+
+
+.buttonarea button{
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+
+.logoarea{
+    margin-left: 2rem;
+}
+
+.companyName{
+    margin-left: 1rem;
+    font-family: "My Soul", cursive;
+  font-weight: 400;
+  font-style: normal;
+}

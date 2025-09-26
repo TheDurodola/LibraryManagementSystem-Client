@@ -1,11 +1,11 @@
-import Navbar from "../components/Navbar.jsx";
-import Hero from "../components/Hero.jsx";
+import MainHeader from "../Headers/MainHeader";
+import Hero from "../Hero/LandingPageHero";
 
 function LandingPage() {
   return (
     <>
-      <Navbar />
-      <Hero />
+      <MainHeader></MainHeader>
+      <Hero></Hero>
     </>
   );
 }
