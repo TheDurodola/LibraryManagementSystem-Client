@@ -1,9 +1,12 @@
 import styles from "./Button.module.css";
+import { Link } from "react-router-dom"
 
 export default function NavbarSignInButton() {
   return (
     <>
-      <button className={styles.button}>Log Out</button>
+    <Link to="/signout">
+      <button className={styles.button}>Sign Out</button>
+      </Link>
     </>
   );
 }

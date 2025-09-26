@@ -1,4 +1,5 @@
-import Navbar from "./components/Navbar.jsx";
+import Navbar from "../Headers/SignUpHeader";
+import Hero from "../Hero/SignUpPageHero"
 
 
 
@@ -6,7 +7,7 @@ function SignUp() {
   return (
     <>
       <Navbar />
-
+      <Hero></Hero>
     </>
   );
 }
