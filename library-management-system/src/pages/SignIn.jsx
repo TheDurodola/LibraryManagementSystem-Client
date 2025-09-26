@@ -1,10 +1,12 @@
-import Navbar from "./Navbar/Navbar2.js";
+import Navbar from "../Headers/SignInHeader";
+import Hero from "../Hero/SignInPageHero"
 
 
 function SignIn() {
   return (
     <>
       <Navbar />
+      <Hero></Hero>
     
     </>
   );
