@@ -1,11 +1,11 @@
-import Navbar from "../components/Navbar.jsx";
-import SignInBox from "../components/SignInBox.jsx";
+import Navbar from "./Navbar/Navbar2.js";
+
 
 function SignIn() {
   return (
     <>
       <Navbar />
-      <SignInBox />
+    
     </>
   );
 }

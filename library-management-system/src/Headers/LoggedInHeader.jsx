@@ -1,9 +1,12 @@
 import viteLogo from "../assets/icons8-library-48.png";
-import "../styles/Navbar.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import styles from "./LoggedInHeader.module.css";
+import NavbarLogOutButton from "../Button/NavbarLogOutButton";
 
-function Navbar3() {
+
+
+function LoggedInHeader() {
   const navigate = useNavigate();
   const [message, setMessage] = useState("");
 
@@ -51,24 +54,22 @@ function Navbar3() {
   };
 
   return (
-    <div className="navbar">
-      <Link to="/">
-        <div className="navbarlogo">
-          <img src={viteLogo} alt="librarylogo" />
-        </div>
-      </Link>
-
-      <div className="navbartitle">
-        <h1>TheLibrary</h1>
-      </div>
-
-      <div className="welcome-text"><p>{message}</p></div>
-
-      <div>
-        <button onClick={handleSignOut}>Log Out</button>
-      </div>
-    </div>
+     <>
+          <div className={styles.navbar}>
+            <div className={styles.logoarea}>
+              <Link to="/">
+                <img src={viteLogo} alt="librarylogo" />
+              </Link>
+            </div>
+            <div className={styles.companyName}>
+              <h1>TheLibrary</h1>
+            </div>
+            <div className={styles.buttonarea}>
+              <NavbarLogOutButton></NavbarLogOutButton>
+            </div>
+          </div>
+        </>
   );
 }
 
-export default Navbar3;
+export default LoggedInHeader;
