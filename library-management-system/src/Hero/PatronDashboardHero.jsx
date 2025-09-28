@@ -10,7 +10,7 @@ export default function PatronDashboard() {
       <div className={styles.container}>
         <Card
           title="Borrow Books"
-          text="Borrow books from our every growing catalogue"
+          text="Borrow books from our ever growing catalogue"
           image={img1}
           url="/patron/borrow"
         />

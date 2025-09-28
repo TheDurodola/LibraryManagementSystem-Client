@@ -9,13 +9,13 @@ export default function LibrarianDashboard() {
       <div className={styles.container}>
         <Card
           title="Add Books"
-          text="Borrow books from our every growing catalogue"
+          text="New books. Lovely. Record A$AP"
           image={img1}
           url="/librarian/book"
         />
         <Card
-          title="Increase Existing Book Stock"
-          text="Return books you have enjoyed and give others a chance to enjoy them too"
+          title="Increase Book Quantity"
+          text="New stock of existing book. Nice. Increase the quantity easily"
           image={img2}
           url="/librarian/stock"
         ></Card>

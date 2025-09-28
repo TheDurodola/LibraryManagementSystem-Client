@@ -1,8 +1,11 @@
-import styles from "./IncreaseStockHero.module.css";
+import styles from "./BorrowBookHero.module.css";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-export default function IncreaseStockHero() {
+
+const BACKEND_URL = "http://localhost:5000/"
+
+export default function BorrowBookHero() {
   const [message, setMessage] = useState(
     "---------------------------------------------"
   );
@@ -10,14 +13,14 @@ export default function IncreaseStockHero() {
     "rgba(0, 0, 0, 1)"
   );
   const [textColor, setTextColor] = useState("#000000ff");
-  const [form, setForm] = useState({ isbn: "", quantity: "" });
+  const [form, setForm] = useState({ isbn: "" });
   const [books, setBooks] = useState([]);
   const [error, setError] = useState("");
 
   useEffect(() => {
     const fetchBooks = async () => {
       try {
-        const response = await fetch("http://localhost:5000/librarian/book", {
+        const response = await fetch(`${BACKEND_URL}patron/book`, {
           method: "GET",
           headers: { "Content-Type": "application/json" },
           credentials: "include",
@@ -37,11 +40,11 @@ export default function IncreaseStockHero() {
     fetchBooks();
   }, []);
 
-  const handleAddBook = async (e) => {
+  const handleBorrow = async (e) => {
     e.preventDefault();
     try {
       const response = await fetch(
-        "http://localhost:5000/librarian/bookquantity",
+        `${BACKEND_URL}patron/borrow`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -92,9 +95,6 @@ export default function IncreaseStockHero() {
             <th>Title</th>
             <th>Author</th>
             <th>Genre</th>
-            <th>Quantity</th>
-            <th>Added By</th>
-            <th>Created At</th>
           </tr>
         </thead>
         <tbody>
@@ -105,9 +105,6 @@ export default function IncreaseStockHero() {
                 <td>{book.title}</td>
                 <td>{book.author}</td>
                 <td>{book.genre}</td>
-                <td>{book.quantity}</td>
-                <td>{book.added_by}</td>
-                <td>{new Date(book.created_at).toLocaleString()}</td>
               </tr>
             ))
           ) : (
@@ -121,9 +118,9 @@ export default function IncreaseStockHero() {
       </table>
       </div>
       <div className={styles.body}>
-        <form className={styles.inputbox} onSubmit={handleAddBook}>
+        <form className={styles.inputbox} onSubmit={handleBorrow}>
           <div className={styles.text}>
-            <h1>Increase Quantity</h1>
+            <h1>Borrow A Book</h1>
             <div
               className={styles.backendresponse}
               style={{ background: backgroundColor, color: textColor }}
@@ -140,20 +137,9 @@ export default function IncreaseStockHero() {
               setForm({ ...form, [e.target.name]: e.target.value })
             }
           />
-          <input
-            className={styles.input}
-            type="number"
-            placeholder="Enter Quantity to be Added"
-            max="100"
-            min="1"
-            name="quantity"
-            onChange={(e) =>
-              setForm({ ...form, [e.target.name]: e.target.value })
-            }
-          />
           <button>Submit</button>
         </form>
-        <Link to={"/librarian"}>
+        <Link to={"/patron"}>
           <button
             className={styles.backbutton}
             style={{ background: "black", color: "white" }}
