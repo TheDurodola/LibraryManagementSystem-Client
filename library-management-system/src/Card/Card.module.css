@@ -1,0 +1,19 @@
+.card{
+    border: 1px solid hsl(0, 0%, 80%);
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px hsla(0, 0%, 80%, 0.1);
+    padding: 50px;
+    margin: 45px;
+    text-align: center;
+    max-width: 350px;
+    max-height: 400px;
+    display: inline-block;
+    flex: 0 0 auto;   
+    justify-items: center;
+    color: black;
+}
+
+.card img{
+   max-height: 15rem;
+   max-width: 15rem;
+}

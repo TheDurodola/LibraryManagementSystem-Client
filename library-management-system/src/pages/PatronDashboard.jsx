@@ -1,11 +1,13 @@
-import Navbar3 from "../Navbar/Navbar3";
+import Header from "../Headers/LoggedInHeader";
+import Hero from "../Hero/PatronDashboardHero"
 
 
 
 function PatronDashboard() {
   return (
     <>
- 
+    <Header></Header>
+    <Hero></Hero>
     </>
   );
 }

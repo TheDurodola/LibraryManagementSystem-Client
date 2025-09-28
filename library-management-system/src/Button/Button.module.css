@@ -1,5 +1,6 @@
 button {
   align-items: center;
+  
   appearance: none;
   background-color: #FCFCFD;
   border-radius: 4px;
@@ -14,7 +15,7 @@ button {
   justify-content: center;
   line-height: 1;
   list-style: none;
-  overflow: hidden;
+  overflow: clip;
   padding-left: 16px;
   padding-right: 16px;
   position: relative;

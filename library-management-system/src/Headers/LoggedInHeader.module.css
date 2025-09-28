@@ -1,29 +1,41 @@
-.navbar{
-    display: flex;
-    justify-content: space-between;
-    background-color: black;
-    padding: min(10px, 8rem);
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  background-color: black;
+  padding: min(10px, 8rem);
 }
 
-
-.navbar h1{
-    color: aliceblue;
+.navbar h1 {
+  color: aliceblue;
 }
 
-
-.buttonarea button{
-    margin-left: 1rem;
-    margin-right: 1rem;
+.buttonarea button {
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
+.logoarea {
+  margin-left: 2rem;
 
-.logoarea{
-    margin-left: 2rem;
 }
 
-.companyName{
-    margin-left: 1rem;
-    font-family: "My Soul", cursive;
+.companyName {
+  margin-left: 30rem;
+  font-family: "My Soul", cursive;
   font-weight: 400;
   font-style: normal;
+
+}
+
+.welcomeMessage {
+  color: rgb(255, 255, 255);
+  margin-top: 0.3rem;
+  margin-left: 20rem;
+  text-align: center;
+  
+}
+
+
+.welcomeMessage h3{
+  font-size: 1rem;
 }
