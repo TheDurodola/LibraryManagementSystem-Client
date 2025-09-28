@@ -1,11 +1,14 @@
-import Navbar3 from "../Headers/LoggedInHeader";
+import Header from "../Headers/LoggedInHeader";
+import Hero from "../Hero/LibrarianDashboard"
+
 
 
 function LibrarianDashboard(){
 
     return(
         <>
-        <Navbar3></Navbar3>
+        <Header></Header>
+        <Hero></Hero>
         </>
     )
 }

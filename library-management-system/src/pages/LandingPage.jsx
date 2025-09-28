@@ -5,6 +5,7 @@ function LandingPage() {
   return (
     <>
       <MainHeader></MainHeader>
+
       <Hero></Hero>
     </>
   );
