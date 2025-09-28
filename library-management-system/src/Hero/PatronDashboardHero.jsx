@@ -1,8 +1,8 @@
 import styles from "./PatronDashboard.module.css";
 import Card from "../Card/Card";
 import img1 from "../assets/cat.png";
-import img2 from "../assets/borrow.png";
-import img3 from "../assets/BorrowBook.jpeg";
+import img2 from "../assets/cardimg3.png";
+
 
 export default function PatronDashboard() {
   return (
@@ -12,11 +12,13 @@ export default function PatronDashboard() {
           title="Borrow Books"
           text="Borrow books from our every growing catalogue"
           image={img1}
+          url="/patron/borrow"
         />
         <Card
           title="Return Books"
           text="Return books you have enjoyed and give others a chance to enjoy them too"
           image={img2}
+          url="/patron/return"
         ></Card>
       </div>
     </>

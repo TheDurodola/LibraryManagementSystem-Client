@@ -1,7 +1,7 @@
 import Header from "../Headers/LoggedInHeader";
-import Hero from "../Hero/AddBookHero"
+import Hero from "../Hero/IncreaseStockHero"
 
-export default function AddBook() {
+export default function IncreaseStockPage() {
   return (
     <>
       <Header></Header>

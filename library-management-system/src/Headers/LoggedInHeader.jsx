@@ -1,6 +1,6 @@
 import viteLogo from "../assets/icons8-library-48.png";
 import { Link, useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import styles from "./LoggedInHeader.module.css";
 import NavbarLogOutButton from "../Button/NavbarLogOutButton";
 
@@ -10,30 +10,28 @@ function LoggedInHeader() {
   const navigate = useNavigate();
   const [message, setMessage] = useState("Welcome Guest");
 
-  // useEffect(() => {
-    const fetchUserProfile = async () => {
-      try {
-        const response = await fetch(`${API_BASE}/auth/profile`, {
-          method: "GET",
-          credentials: "include",
-        });
-        if (response.ok) {
-          const data = await response.json();
-          setMessage(
-            `${data.role.charAt(0).toUpperCase() + data.role.slice(1)} ${
-              data.firstname
-            }`
-          );
-        } else
-          console.error(
-            "Reached the backend and the backend threw an exception"
-          );
-      } catch (error) {
-        console.error("Network Error, Backend Needs your attention");
+  const fetchUserProfile = async () => {
+    try {
+      const response = await fetch(`${API_BASE}/auth/profile`, {
+        method: "GET",
+        credentials: "include",
+      });
+      if (response.ok) {
+        const data = await response.json();
+        setMessage(
+          `${data.role.charAt(0).toUpperCase() + data.role.slice(1)} ${
+            data.firstname
+          }`
+        );
+      } else {
+        console.error("Reached the backend and the backend threw an exception");
+        navigate("/");
       }
-    };
-    fetchUserProfile();
-  // });
+    } catch (error) {
+      console.error("Network Error, Backend Needs your attention");
+    }
+  };
+  fetchUserProfile();
 
   const handleSignOut = async (e) => {
     e.preventDefault();
