@@ -26,3 +26,18 @@
   height: auto;
   aspect-ratio: 1 / 1;
 }
+
+.card h3 {
+  /* font-weight: 800; */
+  font-family: "Alfa Slab One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.card p {
+  width: 20rem;
+  font-family: "Oranienbaum", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.3rem;
+}
