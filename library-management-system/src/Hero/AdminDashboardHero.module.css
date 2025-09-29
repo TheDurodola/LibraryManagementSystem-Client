@@ -1,0 +1,13 @@
+.container {
+margin-top: 4rem;
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 0rem;
+  justify-content: center;
+}
+
+.container::-webkit-scrollbar {
+  height: 8px;
+}
